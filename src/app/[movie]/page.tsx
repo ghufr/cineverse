@@ -1,6 +1,6 @@
 import { Card, CardTitle } from "@/components/ui/card";
 
-export default function Home() {
+export default function MovieDetail() {
   return (
     <div className="min-h-screen">
       <main className="container">
