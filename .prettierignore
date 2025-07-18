@@ -1,3 +1,6 @@
 build
 coverage
 .next
+*.d.ts
+
+src/hooks/tmdb.ts
