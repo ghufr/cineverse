@@ -2,10 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [
-      new URL("https://image.tmdb.org/**"),
-      new URL("https://placehold.co/**"),
-    ],
+    unoptimized: process.env.NODE_ENV === "test",
+    remotePatterns: [new URL("https://image.tmdb.org/**")],
   },
 };
 

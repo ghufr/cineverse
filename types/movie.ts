@@ -15,4 +15,4 @@ export type MovieGenre = NonNullable<MovieDetail["genres"]>[number];
 
 export type MovieCredits = TmdbResponse<"/3/movie/{movie_id}/credits">;
 export type MovieCast = NonNullable<MovieCredits["cast"]>[number];
-export type MovieCrew = MovieCredits["crew"];
+export type MovieCrew = NonNullable<MovieCredits["crew"]>[number];

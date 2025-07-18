@@ -1,3 +1,4 @@
+import { BLUR_DATA_URL } from "@/constants/movie";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -15,13 +16,15 @@ export default function MovieBackdrop({
         src={
           !hasError && backdropPath
             ? `https://image.tmdb.org/t/p/w1280${backdropPath}`
-            : "/placeholder.svg?height=400&width=1280"
+            : BLUR_DATA_URL
         }
         alt={title || ""}
         fill
         className="object-cover"
         onError={() => setHasError(true)}
         priority
+        placeholder={hasError ? "empty" : "blur"}
+        blurDataURL={BLUR_DATA_URL}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent" />
     </div>

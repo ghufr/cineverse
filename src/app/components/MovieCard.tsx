@@ -1,4 +1,5 @@
 import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { BLUR_DATA_URL } from "@/constants/movie";
 import { Movie } from "@/types/movie";
 import { Calendar, Star } from "lucide-react";
 import Image from "next/image";
@@ -19,7 +20,7 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
   const posterUrl =
     !imageError && movie?.poster_path
       ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-      : "https://placehold.co/500x750/334155/eaeaea?text=No+Image";
+      : BLUR_DATA_URL;
 
   return (
     <Link href={`/movie/${movie.id}`} className="group block h-full">
@@ -32,7 +33,8 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
             className="object-cover"
             sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1280px) 25vw, 20vw"
             onError={handleImageError}
-            unoptimized
+            placeholder={imageError ? "empty" : "blur"}
+            blurDataURL={BLUR_DATA_URL}
           />
           <div className="absolute inset-0 bg-black opacity-0 transition-opacity duration-200 group-hover:opacity-20" />
         </div>

@@ -14,7 +14,7 @@ export function CategoryFilter({
   onCategoryChange,
 }: CategoryFilterProps) {
   return (
-    <div className="mb-8 flex justify-center gap-2 md:justify-end">
+    <div className="flex justify-start gap-2 lg:justify-end">
       {movieCategories.map((category) => (
         <Button
           key={category.key}
