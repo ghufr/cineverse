@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cineverse 🎬
 
-## Getting Started
+Cineverse is a sleek and modern movie discovery web application built with Next.js and TypeScript. Browse, search, and explore a vast collection of movies, leveraging the TMDB API for real-time data. The application features a fully responsive design.
 
-First, run the development server:
+## ✨ Showcase
+
+![Image](https://github.com/user-attachments/assets/5e6d70e9-e45c-4c30-ab10-9f167ce91fbc)
+
+## 📦 Getting Started
+
+Follow these instructions to get a local copy up and running.
+
+### Prerequisites
+
+- Node.js (v20 or later)
+- npm, yarn, or pnpm
+
+### Installation
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/ghufr/cineverse.git
+    cd cineverse
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Set up environment variables:**
+
+    Create a `.env.local` file in the root of your project and add your TMDB Access Token. You can get one by signing up on the [TMDB website](https://www.themoviedb.org/settings/api).
+
+    ```.env.local
+    NEXT_PUBLIC_TMDB_ACCESS_TOKEN=your_tmdb_access_token_here
+    ```
+
+### Running the Development Server
+
+Once the installation is complete, you can run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
